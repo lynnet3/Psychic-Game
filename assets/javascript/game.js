@@ -4,3 +4,7 @@ var wins = 0;
 var losses = 0;
 var guessesMade = 9;
 var playersChoices = [];
+
+document.onkeyup = function(event){
+    
+}
