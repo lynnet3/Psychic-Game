@@ -29,9 +29,15 @@ document.onkeyup = function(event){
         if (guessesMade === 0){
             guessesMade = 9;
             losses ++;
-            playersChoices[];
+            playersChoices [];
         }
 
-        
+        var html =
+        "<h1>The Psychic Game</h1>"
+        "<p>Guess What letter or number I'm thinking of</p>"
+        "<p>Wins:"+ wins +"</p>"
+        "<p>Losses:" + losses + "</p>"
+        "<p>Guesses Left:" + guessesMade +"</p>"
+        "<p>Your Guesses so far:" + playersChoices +"</p>"
     }
 }
