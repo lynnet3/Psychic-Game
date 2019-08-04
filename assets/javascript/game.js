@@ -7,14 +7,15 @@ var playersChoices = [];
 
 var computerGuess = computerChoices [Math.floor(Math.random() * computerChoices.length)];
 
+
+
 document.onkeyup = function(event){
     
     var playerGuess = event.key;
     
     
 
-    if (computerChoices.indexOf(playerGuess) > -1){
-        
+
         if (playerGuess === computerGuess){
             wins++;
             guessesMade = 9;
@@ -40,4 +41,4 @@ document.onkeyup = function(event){
         "<p>Guesses Left:" + guessesMade +"</p>"
         "<p>Your Guesses so far:" + playersChoices +"</p>"
     }
-}
+
