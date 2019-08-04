@@ -11,7 +11,6 @@ document.onkeyup = function(event){
     
     var computerGuess = computerChoices [Math.floor(Math.random() * computerChoices.length)];
 
-    var choices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "g", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
     if (choices.indexOf(playerGuess) > -1){
         
@@ -21,7 +20,7 @@ document.onkeyup = function(event){
             playersChoices =[];
         }
 
-        if (playerGuess != computerGuess){
+        if (playerGuess !== computerGuess){
             guessesMade --;
             playersChoices.push(playerGuess);
         }
@@ -29,7 +28,7 @@ document.onkeyup = function(event){
         if (guessesMade === 0){
             guessesMade = 9;
             losses ++;
-            playersChoices [];
+            playersChoices [i];
         }
 
         var html =
