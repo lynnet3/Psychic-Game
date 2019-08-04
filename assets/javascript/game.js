@@ -5,40 +5,36 @@ var guessesMade = 9;
 var playersChoices = [];
 
 
-var computerGuess = computerChoices [Math.floor(Math.random() * computerChoices.length)];
-
-
-
 document.onkeyup = function(event){
     
-    var playerGuess = event.key;
-    
-    
-
-
-        if (playerGuess === computerGuess){
+    var computerGuess = computerChoices [Math.floor(Math.random() * computerChoices.length)];
+    var playerGuess = event.key.toLocaleLowerCase;  
+    playersChoices.push(playerGuess);
+        
+        if (playerGuess == computerGuess){
             wins++;
             guessesMade = 9;
             playersChoices =[];
         }
 
-        if (playerGuess !== computerGuess){
+        else if (playerGuess !== computerGuess){
             guessesMade --;
-            playersChoices.push(playerGuess);
+
         }
 
-        if (guessesMade === 0){
+        else if (guessesMade == 0){
             guessesMade = 9;
             losses ++;
-            playersChoices [i];
+            playersChoices = [];
         }
 
         var html =
-        "<h1>The Psychic Game</h1>"
-        "<p>Guess What letter or number I'm thinking of</p>"
-        "<p>Wins:"+ wins +"</p>"
-        "<p>Losses:" + losses + "</p>"
-        "<p>Guesses Left:" + guessesMade +"</p>"
-        "<p>Your Guesses so far:" + playersChoices +"</p>"
+            "<h1>The Psychic Game</h1>"
+            "<p>Guess What letter or number I'm thinking of</p>"
+            "<p>Wins:"+ wins +"</p>"
+            "<p>Losses:" + losses + "</p>"
+            "<p>Guesses Left:" + guessesMade +"</p>"
+            "<p>Your Guesses so far:" + playersChoices +"</p>"
+        document.getElementById("#psychGame").innerHTML = html
     }
 
