@@ -36,7 +36,7 @@
 
             var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
             var playerGuess = event.key.toLocaleLowerCase;
-            //playersChoices.push(playerGuess);
+            playersChoices.push(playerGuess);
             // if the player guesses the right letter their wins go up and the guessesMade reset to 9
             if (playerGuess == computerGuess) {
                 wins++;
